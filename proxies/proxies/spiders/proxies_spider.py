@@ -28,6 +28,6 @@ class ProxiesSpider(scrapy.Spider):
                 port += str(dct[i])
 
             yield {
-                'ip': row.css('td::text').getall()[0],
+                'ip_address': row.css('td::text').getall()[0],
                 'port': port,
             }
